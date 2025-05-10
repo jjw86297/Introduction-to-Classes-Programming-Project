@@ -4,10 +4,10 @@
 
 using namespace std;
 
-const int num_months = 12
+const int num_months = 12;
 string months[12] = {"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
 
-Date::Date(int, int, int)
+Date::Date(int d, int m, int y)
 {
 	setDate(d, m, y);
 }
@@ -65,7 +65,7 @@ int Date::lastDay(int m, int y)
 			return 30;
 		case 2:
 		{
-			if isLeapYear(y)
+			if (isLeapYear(y))
 				return 29;
 			else
 				return 28;
